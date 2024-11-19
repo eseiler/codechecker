@@ -309,7 +309,7 @@ class HtmlBuilder:
 
         table_reports = map(lambda data: {
             'link': os.path.basename(data['link']),
-            'file-path': data['report']['fileId'],
+            'file-path': self.files[data['report']['fileId']]['filePath'],
             'report-hash': data['report']['reportHash'],
             'checker-name': data['report']['checker']['name'],
             'checker-url': data['report']['checker']['url'],
